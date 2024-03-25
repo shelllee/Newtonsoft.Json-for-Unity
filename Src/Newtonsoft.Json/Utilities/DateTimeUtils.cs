@@ -25,7 +25,9 @@
 
 using System;
 using System.IO;
+#if HAVE_XML_DOCUMENT
 using System.Xml;
+#endif
 using System.Globalization;
 
 namespace Newtonsoft.Json.Utilities
@@ -58,7 +60,7 @@ namespace Newtonsoft.Json.Utilities
 #endif
         }
 
-#if !(PORTABLE40 || PORTABLE) || NETSTANDARD1_3
+#if HAVE_XML_DOCUMENT
         public static XmlDateTimeSerializationMode ToSerializationMode(DateTimeKind kind)
         {
             switch (kind)
@@ -766,7 +768,7 @@ namespace Newtonsoft.Json.Utilities
             }
         }
 #endif
-        #endregion
+#endregion
 
         private static void GetDateValues(DateTime td, out int year, out int month, out int day)
         {

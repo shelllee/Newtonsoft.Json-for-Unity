@@ -31,7 +31,9 @@ using System.Numerics;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+#if HAVE_XML_DOCUMENT
 using System.Xml;
+#endif
 using Newtonsoft.Json.Serialization;
 #if HAVE_XLINQ
 using System.Xml.Linq;

@@ -31,7 +31,9 @@ using System.Numerics;
 #endif
 using System.Text;
 using System.IO;
+#if HAVE_XML_DOCUMENT
 using System.Xml;
+#endif
 using Newtonsoft.Json.Utilities;
 using System.Diagnostics;
 

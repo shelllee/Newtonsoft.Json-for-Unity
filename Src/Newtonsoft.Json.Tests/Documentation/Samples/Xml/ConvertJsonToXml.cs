@@ -28,7 +28,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+#if HAVE_XLINQ
 using System.Xml.Linq;
+#endif
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;

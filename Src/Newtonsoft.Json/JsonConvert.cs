@@ -31,7 +31,9 @@ using System.Numerics;
 #endif
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Utilities;
+#if HAVE_XML_DOCUMENT
 using System.Xml;
+#endif
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 using System.Text;
@@ -1080,6 +1082,6 @@ namespace Newtonsoft.Json
             return (XDocument?)DeserializeObject(value, typeof(XDocument), converter);
         }
 #endif
-        #endregion
+#endregion
     }
 }
